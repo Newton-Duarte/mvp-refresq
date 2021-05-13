@@ -1,5 +1,5 @@
 // import { useMovements } from '../../../hooks/useMovements';
-import { formatDate } from '../../../utils/formatDate';
+import { formatDateTimeBR } from '../../../utils/formatDate';
 import { convertStringToCompare } from '../../../utils/convertStringToCompare'
 import { Container } from './styles';
 import { FiEdit2, FiTrash, FiCheck } from 'react-icons/fi'
@@ -33,7 +33,7 @@ export function MovementsTable({ movements, search, onEdit, onComplete, onDelete
               <td>{movement.customer}</td>
               <td>{movement.id}</td>
               <td>
-                {formatDate(new Date(movement.createdAt), 'pt-BR')}
+                {formatDateTimeBR(new Date(movement.createdAt))}
               </td>
               <td>{movement.vehicle}</td>
               <td className={movement.status}>{movement.status}</td>
